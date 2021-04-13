@@ -1,0 +1,244 @@
+/*############## GLOBAL STYLES ################3*/
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url("./images/rapeatable-bg.png");
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Open sans Regular";
+    color: #62585f;
+}
+
+a:link{
+    font-size: 14px;
+}
+
+.highlight-text{
+    color: #ef4634;
+
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.site{
+    max-width: 1400px;
+    margin:auto;
+}
+
+/*############## SITE FOOTER #################*/
+
+.site-footer{
+    max-width: 900px;
+    min-height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid #62585f;
+    border-bottom:1px solid #62585f;
+}
+
+.footer-content{
+    flex:1;
+    padding-right:1%;
+    margin-right:auto;
+    margin-top:3%;
+}
+
+.footer-content__heading{
+    font-size:25px;
+    text-shadow:2px #fff;
+}
+
+.footer-content__description{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.footer-content__social{
+    background-image: url("./images/social.png");
+    height:40px;
+    background-repeat: no-repeat;
+}
+
+.end__info{
+    max-width: 900px;
+    margin:auto;
+    text-align:center;
+}
+
+@media only screen and (max-width:768px){
+    .site-footer{
+        flex-direction: column;
+    }
+    .footer-content{
+        padding:10px;
+        margin-top: 0;
+    }
+}
+
+/*############## SITE NAVBAR #################*/
+
+.site__navbar {
+    width: 100%;
+    height: 105px;
+    background-color: #2e2d2d;
+}
+
+
+
+/*############## SITE HEADER HERO #################*/
+
+.site__hero{
+    margin-bottom:3px;
+    background-color: #e73d2d;
+    height:544px;
+    margin-top:0px;
+}
+.site__heroSlider{
+    max-width:900px;
+    background-image: url("./images/slider-image.png");
+    background-size: cover;
+    height:100%;
+    margin:auto; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.site__heroSlider__text {
+    text-align:center;
+    width:75%;
+    position:relative;
+    margin:auto;
+    top:60%;
+}
+
+.site__heroSlider__text h1{
+    font-family: "Open sans Bold";
+    font-size:70px;
+    color:#fff;
+    margin-top: 0px;
+}
+.site__heroSlider__text p{
+    font-family: "Open sans semibold";
+    font-size:16px;
+    line-height:24px;
+    color:#fff;
+}
+
+@media only screen and (max-width: 768px) {
+    
+.site__heroSlider__text h1{
+    font-size:45px;
+}
+.site__heroSlider__text p{
+    font-size:16px;
+}
+}
+
+/*############## SITE HEADER SERVICES #################*/
+
+.services__container{
+    min-height:101px;
+    width:100%;
+    background-image: url("./images/features-repeatable-bg.png");
+}
+.services{
+    display:flex;
+    max-width:900px;
+    margin:auto;
+}
+.service{
+    flex:1;
+    display:flex;
+    height:100%;
+    padding:10px;
+}
+
+.service__imageContainer
+{
+    width:65px;
+    height:55px;
+    overflow: hidden;
+    background-image: url("./images/feature-icons.png");
+    object-fit: contain;
+}
+
+.service__imageContainer:hover
+{ background-position: 0px 54px;
+}
+
+.service__imageContainer2
+{
+    width:72px;
+    height:55px;
+    overflow: hidden;
+    background-image: url("./images/feature-icons.png");
+    object-fit: contain;
+    background-position: -56px 0px;
+}
+
+.service__imageContainer2:hover
+{ background-position: -56px 54px;
+}
+
+.service__imageContainer3
+{
+    width:72px;
+    height:55px;
+    overflow: hidden;
+    background-image: url("./images/feature-icons.png");
+    object-fit: contain;
+    background-position: -117px 0px;
+}
+
+.service__imageContainer3:hover
+{ background-position: -117px 54px;
+}
+
+.service__heading{
+    margin: 0;
+    padding-left: 20px;
+    font-style: "Open sans bold";
+    font-size: 20px;
+    text-shadow: 2px #fff;
+}
+
+.service__heading span:hover{
+    color:#222;
+}
+
+.service__desc{
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .services{
+         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .service__imageContainer
+    {
+        width:55px;
+    }
+    .service__imageContainer2
+    {
+        width:55px;
+    }
+    .service__imageContainer3
+    {
+        width:55px;
+    }
+}
