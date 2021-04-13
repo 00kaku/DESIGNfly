@@ -12,6 +12,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -25,15 +26,35 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 <div class="site">
-	<div class="site__navbar">
-		<nav>
+<header id="masthead" class="site-header" role="banner">
+	<div class="site-branding">
+		<?php
+		if ( get_theme_mod( 'custom_logo' ) ) {
+			the_custom_logo();
+		}
+		?>
+	</div><!-- .site-branding -->
 
-		</nav>
-	</div>
+	<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'blank-theme' ); ?>">
+		<?php
+		wp_nav_menu(
+			[
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+				'menu_class'     => 'primary-menu menu',
+				'depth'          => 3,
+			]
+		);
+		?>
+		<input type="text" />
+		<i class="fa fa-search" aria-hidden="true"></i>
+	</nav><!-- #site-navigation -->
+</header><!-- #masthead -->
 
+<div id="content" class="site-content">
 <!-- Site hero shwon only on front page-->
 <?php
-	if( is_front_page() ) :
+	if(is_front_page()):
 ?>
 		<div class="site__hero">
 			<div class="site__heroSlider">
