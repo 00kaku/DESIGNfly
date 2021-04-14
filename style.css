@@ -34,6 +34,13 @@ a:hover{
 .site{
     max-width: 1400px;
     margin:auto;
+	position: relative;
+
+}
+
+.current-menu-item a{
+	background-color: #ef4634;
+	color: #fff;
 
 }
 
@@ -84,7 +91,7 @@ a:hover{
         flex-direction: column;
     }
     .footer-content{
-        padding:10px;
+        padding:50px;
         margin-top: 0;
     }
 }
@@ -97,6 +104,7 @@ a:hover{
 	margin: auto;
 	justify-content:space-between;
 	align-items:center;
+
 }
 
 .main-navigation{
@@ -117,15 +125,14 @@ nav ul li a:link{
 	text-align: center;
 }
 
-nav ul li a:hover{
-	color:#fff;
-	background-color: #ef4634;
-}
-
-nav input {
-	border: 3px solid #ccc;
+nav input[type=text] {
+	border: 1px solid #222;
 	height:20px;
 	width:150px;
+}
+
+.icon{
+	display:none;
 }
 
 @media only screen and (max-width:768px)
@@ -139,6 +146,51 @@ nav input {
 		background-color:#fff;
 	}
 
+	.site-header{
+		flex-direction: column;
+		max-height: 100%;
+	}
+
+}
+
+@media only screen and (max-width:600px)
+{
+	nav ul li{
+		display:block;
+	}
+
+	nav ul {
+		padding:0px;
+	}
+
+	.main-navigation{
+		flex-direction: column;
+	}
+
+	nav ul li a:link{
+		padding: 5px;
+	}
+
+	.site-header{
+		align-items: flex-start;
+		padding:50px;
+	}
+
+	.main-navigation{
+		display:none;
+	}
+
+	.main-navigation.responsive{
+		display:block;
+	}
+
+	.icon{
+		display:block;
+		position: absolute;
+		top:50px;
+		right:30px;
+		font-size: large;
+	}
 }
 
 
@@ -188,6 +240,14 @@ nav input {
 .site__heroSlider__text p{
     font-size:16px;
 }
+.site__hero{
+	max-height: 400px;
+}
+
+.site__heroSlider__text {
+    top:30%;
+}
+
 }
 
 /*############## SITE HEADER SERVICES #################*/
@@ -216,6 +276,8 @@ nav input {
     overflow: hidden;
     background-image: url("./images/feature-icons.png");
     object-fit: contain;
+	margin-top: auto;
+    margin-bottom: auto;
 }
 
 .service__imageContainer:hover
@@ -230,6 +292,8 @@ nav input {
     background-image: url("./images/feature-icons.png");
     object-fit: contain;
     background-position: -56px 0px;
+	margin-top: auto;
+    margin-bottom: auto;
 }
 
 .service__imageContainer2:hover
@@ -244,6 +308,8 @@ nav input {
     background-image: url("./images/feature-icons.png");
     object-fit: contain;
     background-position: -117px 0px;
+	margin-top: auto;
+    margin-bottom: auto;
 }
 
 .service__imageContainer3:hover
@@ -266,13 +332,7 @@ nav input {
     padding-left: 20px;
 }
 
-@media only screen and (max-width: 768px){
-    .services{
-         flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 960px){
+@media only screen  and (max-width: 960px){
     .service__imageContainer
     {
         width:55px;
@@ -285,4 +345,15 @@ nav input {
     {
         width:55px;
     }
+	.service__text{
+		display:none
+	}
+
+	.service{
+		justify-content: space-evenly;
+	}
+
+	.services__container{
+		min-height: 50px;
+	}
 }

@@ -46,9 +46,14 @@ if ( function_exists( 'wp_body_open' ) ) {
 			]
 		);
 		?>
+		<div>
 		<input type="text" />
 		<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
 	</nav><!-- #site-navigation -->
+	<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+		<i class="fa fa-bars fa-2x"></i>
+	</a>
 </header><!-- #masthead -->
 
 <div id="content" class="site-content">
@@ -77,7 +82,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 	<div class="services">
 		<div class="service">
 			<div class="service__imageContainer"></div>
-			<div>
+			<div class="service__text">
 				<h2 class="service__heading"><span class="highlight-text">Advertising</span></h2>
 				<p class="service__desc">Lorem ipsum dolor sit amet, consectetur...</p>
 			</div>
@@ -85,7 +90,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 		<div class="service">
 			<div class="service__imageContainer2"></div>
-			<div>
+			<div class="service__text">
 				<h2 class="service__heading"><span class="highlight-text">Multemedia</span></h2>
 				<p class="service__desc">Lorem ipsum dolor sit amet, consectetur...</p>
 			</div>
@@ -93,7 +98,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 		<div class="service">
 			<div class="service__imageContainer3"></div>
-			<div>
+			<div class="service__text">
 				<h2 class="service__heading"><span class="highlight-text">Photography</span></h2>
 				<p class="service__desc">Lorem ipsum dolor sit amet, consectetur...</p>
 			</div>

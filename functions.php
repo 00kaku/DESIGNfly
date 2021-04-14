@@ -23,8 +23,10 @@ require_once DESIGNIFY_TEMP_DIR . '/inc/helpers/custom-functions.php';
 require_once DESIGNIFY_TEMP_DIR . '/inc/helpers/template-tags.php';
 
 function _s_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0' );
-	wp_enqueue_style( 'style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7' );
+	wp_enqueue_style( 'my-style', get_stylesheet_uri(), array(), '1.0' );
+	wp_enqueue_style( 'fa-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7' );
+	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/script.js', array(), 1.1, true );
+
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
