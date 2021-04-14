@@ -40,14 +40,14 @@ class DESIGNIFY {
 		/**
 		 * Filters
 		 */
-		add_filter( 'excerpt_more', [ $this, 'add_read_more_link' ] );
-		add_filter( 'body_class', [ $this, 'filter_body_classes' ] );
+		add_filter( 'excerpt_more', array( $this, 'add_read_more_link' ) );
+		add_filter( 'body_class', array( $this, 'filter_body_classes' ) );
 
 		/**
 		 * Actions
 		 */
-		add_action( 'wp_head', [ $this, 'add_pingback_link' ] );
-		add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
+		add_action( 'wp_head', array( $this, 'add_pingback_link' ) );
+		add_action( 'after_setup_theme', array( $this, 'setup_theme' ) );
 
 	}
 
@@ -68,18 +68,18 @@ class DESIGNIFY {
 
 		add_theme_support(
 			'html5',
-			[
+			array(
 				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
-			]
+			)
 		);
 
 		add_theme_support(
 			'post-formats',
-			[
+			array(
 				'aside',
 				'image',
 				'video',
@@ -89,25 +89,25 @@ class DESIGNIFY {
 				'status',
 				'audio',
 				'chat',
-			]
+			)
 		);
 
 		add_theme_support(
 			'custom-background',
-			[
+			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
-			]
+			)
 		);
 
 		add_theme_support(
 			'custom-logo',
-			[
-				'header-text' => [
+			array(
+				'header-text' => array(
 					'site-title',
 					'site-description',
-				],
-			]
+				),
+			)
 		);
 
 		add_editor_style();
@@ -117,9 +117,9 @@ class DESIGNIFY {
 		add_theme_support( 'align-wide' );
 
 		register_nav_menus(
-			[
+			array(
 				'primary' => esc_html__( 'Primary Menu', 'designify' ),
-			]
+			)
 		);
 
 		if ( ! isset( $content_width ) ) {

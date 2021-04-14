@@ -91,7 +91,7 @@ a:hover{
         flex-direction: column;
     }
     .footer-content{
-        padding:50px;
+        padding:10px 50px;
         margin-top: 0;
     }
 }

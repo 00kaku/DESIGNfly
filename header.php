@@ -22,7 +22,7 @@
 if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 } else {
-	do_action( 'wp_body_open' );
+	do_action( 'designify_wp_body_open' );
 }
 ?>
 <div class="site">
@@ -35,15 +35,15 @@ if ( function_exists( 'wp_body_open' ) ) {
 		?>
 	</div><!-- .site-branding -->
 
-	<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'blank-theme' ); ?>">
+	<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'designify' ); ?>">
 		<?php
 		wp_nav_menu(
-			[
+			array(
 				'theme_location' => 'primary',
 				'menu_id'        => 'primary-menu',
 				'menu_class'     => 'primary-menu menu',
 				'depth'          => 3,
-			]
+			)
 		);
 		?>
 		<div>
@@ -59,8 +59,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 <div id="content" class="site-content">
 <!-- Site hero shwon only on front page-->
 <?php
-	if(is_front_page()):
-?>
+if ( is_front_page() ) :
+	?>
 		<div class="site__hero">
 			<div class="site__heroSlider">
 				<div class="site__heroSlider__text">

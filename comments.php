@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$comments_number = get_comments_number();
-			if ( 1 === $comments_number ) {
+			$designify_comments_number = get_comments_number();
+			if ( 1 === $designify_comments_number ) {
 				printf(
 					/* translators: %s: post title */
 					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'designify' ),
